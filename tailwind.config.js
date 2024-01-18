@@ -1,5 +1,3 @@
-const colors = require("tailwindcss/colors");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,36 +7,35 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    fontSize: { base: "1.25rem" },
     extend: {
+      fontSize: { base: "1.25rem" },
       colors: {
-        amber: colors.amber,
+        primary: "rgb(156, 87, 252)",
+        "primary-content": "rgb(255, 255, 255)",
+        "primary-dark": "rgb(126, 37, 251)",
+        "primary-light": "rgb(186, 137, 253)",
+        "primary-superdark": "rgb(60, 41, 86)",
 
-        primary: "#579bfc",
-        "primary-content": "#022f6e",
-        "primary-dark": "#257dfb",
-        "primary-light": "#89b9fd",
+        secondary: "rgb(183, 252, 87)",
+        "secondary-content": "rgb(49, 83, 1)",
+        "secondary-dark": "rgb(132, 221, 7)",
+        "secondary-light": "rgb(204, 253, 137)",
 
-        secondary: "#9c57fc",
-        "secondary-content": "#ffffff",
-        "secondary-dark": "#7e25fb",
-        "secondary-light": "#ba89fd",
+        background: "rgb(15, 12, 19)",
+        foreground: "rgb(37, 33, 43)",
+        border: "rgb(62, 56, 72)",
 
-        background: "#16191d",
-        foreground: "#21252c",
-        border: "#363e49",
+        copy: "rgb(251, 251, 252)",
+        "copy-light": "rgb(216, 212, 222)",
+        "copy-lighter": "rgb(164, 155, 177)",
 
-        copy: "#fbfbfc",
-        "copy-light": "#d3d8de",
-        "copy-lighter": "#98a3b3",
+        success: "rgb(87, 252, 87)",
+        warning: "rgb(252, 252, 87)",
+        error: "rgb(252, 87, 87)",
 
-        success: "#57fc57",
-        warning: "#fcfc57",
-        error: "#fc5757",
-
-        "success-content": "#015201",
-        "warning-content": "#525201",
-        "error-content": "#520101"
+        "success-content": "rgb(1, 82, 1)",
+        "warning-content": "rgb(82, 82, 1)",
+        "error-content": "rgb(82, 1, 1)"
       }
     }
   },

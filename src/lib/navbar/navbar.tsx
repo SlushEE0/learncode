@@ -1,29 +1,54 @@
 import { ReactNode } from "react";
+import Link from "next/link";
 
 import "./navbar.css";
+import WaterDropRoundedIcon from "@mui/icons-material/WaterDropRounded";
+import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
+import { SvgIcon } from "@mui/material";
 
 export default function Navbar({}) {
   return (
-    <section className="fixed flex top-0 left-0 m-0 w-screen h-14 bg-foreground rounded-b-xl gap-[1rem] items-center justify-start pl-4 pr-4">
-      <NavbarItem>
-        <p>A</p>
+    <section className="navbar">
+      <NavbarItem name="Home">
+        <Link href={"/"}>
+          <SvgIcon component={WaterDropRoundedIcon}></SvgIcon>
+        </Link>
       </NavbarItem>
-      <NavbarItem>
-        <p>B</p>
-      </NavbarItem>
-      <NavbarItem>
-        <p>C</p>
-      </NavbarItem>
-      <NavbarItem>
-        <p>D</p>
-      </NavbarItem>
-      <NavbarItem>
-        <p>E</p>
-      </NavbarItem>
+      <div className="container_navbar-items">
+        <NavbarItem name="Courses">
+          <Link href={"/courses"}>
+            <SvgIcon component={MenuBookRoundedIcon}></SvgIcon>
+          </Link>
+        </NavbarItem>
+        <NavbarItem name="C">
+          <p>C</p>
+        </NavbarItem>
+        <NavbarItem name="D">
+          <p>D</p>
+        </NavbarItem>
+        <NavbarItem name="E">
+          <p>E</p>
+        </NavbarItem>
+      </div>
     </section>
   );
 }
 
-function NavbarItem({ children }: { children: ReactNode | String }) {
-  return <div className="navbar-item">{children}</div>;
+function NavbarItem({
+  children,
+  name
+}: {
+  children: ReactNode | String;
+  name: string;
+}) {
+  return (
+    <section className={"navbar-item group"}>
+      {children}
+      <NavbarTooltip {...{ name }} />
+    </section>
+  );
+}
+
+function NavbarTooltip({ name }: { name: string }) {
+  return <span className={"navbar-tooltip group-hover:scale-100"}>{name}</span>;
 }

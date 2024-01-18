@@ -6,8 +6,13 @@ import Navbar from "@/lib/navbar/navbar";
 
 export const metadata = {
   title: "Learn To Code",
-  description: ""
+  description: "wee"
 };
+
+const inter = Lexend({
+  weight: "400",
+  subsets: ["latin"]
+});
 
 export default function RootLayout({
   children
@@ -16,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={"bg-background"}>{children}</body>
+      <body className={inter.className + " bg-background flex"}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -8,9 +8,5 @@ const inter = Lexend({
 });
 
 export default function Home() {
-  return (
-    <main className={inter.className + " flex"}>
-      <Navbar />
-    </main>
-  );
+  return <main className={inter.className + " flex"}></main>;
 }
