@@ -16,7 +16,7 @@
   }
 
   .navbar {
-    @apply fixed flex top-2 left-2 m-0 w-14 h-14 bg-foreground 
+    @apply fixed flex top-2 left-2 m-0 w-14 h-14 bg-background-items
     rounded-xl gap-4 items-center justify-start shrink-0 pl-1.5 
     pr-2 transition-all duration-500 hover:w-[17.5rem] shadow-lg 
     border-2 border-border;

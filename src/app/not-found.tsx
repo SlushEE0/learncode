@@ -1,7 +1,6 @@
 import Link from "next/link";
 
-import { Button } from "@mui/joy";
-import CustomMuiStyles from "@/lib/MuiStyles";
+import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
@@ -10,13 +9,11 @@ export default function NotFound() {
       <hr />
       <p>Could not find requested resource</p>
       <br />
-      <CustomMuiStyles>
-        <Link href="/">
-          <Button size="lg" variant="solid" style={{ transition: "all 200ms" }}>
-            <h1 className="text-2xl">Back to Homepage</h1>
-          </Button>
-        </Link>
-      </CustomMuiStyles>
+      <Link href="/">
+        <Button variant="default" size="lg">
+          Return Home
+        </Button>
+      </Link>
     </section>
   );
 }

@@ -1,17 +1,18 @@
-import { Inter, Lexend } from "next/font/google";
+import { Lexend } from "next/font/google";
 
 import "./globals.css";
-import Messager from "../lib/messager/messager";
-import Navbar from "@/lib/navbar/navbar";
+import Messager from "../components/messager/messager";
+import Navbar from "@/components/navbar/navbar";
 
 export const metadata = {
   title: "Learn To Code",
   description: "wee"
 };
 
-const inter = Lexend({
+export const fontSans = Lexend({
   weight: "400",
-  subsets: ["latin"]
+  subsets: ["latin"],
+  variable: "--font-sans"
 });
 
 export default function RootLayout({
@@ -21,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " bg-background flex"}>
+      <body className={fontSans.className + " bg-background flex justify-center items-center"}>
         <Navbar />
         {children}
       </body>

@@ -1,5 +1,5 @@
-import Messager from "@/lib/messager/messager";
-import Navbar from "@/lib/navbar/navbar";
+import Messager from "@/components/messager/messager";
+import Navbar from "@/components/navbar/navbar";
 import { Lexend } from "next/font/google";
 
 const inter = Lexend({
